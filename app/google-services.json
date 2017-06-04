@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "527546017059",
+    "project_id": "getwheysted-169000"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527546017059:android:ae98d9fe3ed88382",
+        "android_client_info": {
+          "package_name": "com.shobikha.android.wheysted"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527546017059-qavdbku445qmies4qov2serkmefc2mgi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shobikha.android.wheysted",
+            "certificate_hash": "c229f7c0618d00123deb927f19c8e70c8051077a"
+          }
+        },
+        {
+          "client_id": "527546017059-55kauuabh9ihfr87ir1jqjm86et07ejj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr2LrPyjLRCt_kgAiyQpSsvBfHojBpdlA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
