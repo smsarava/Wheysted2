@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -41,10 +42,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SignIn.setOnClickListener(this);
         signOut.setOnClickListener(this);
         signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this,this).addApi(Auth.GOOGLE_SIGN_IN_API, signInOptions).build();
+        googleApiClient = new GoogleApiClient.Builder(this)
+                            .enableAutoManage(this,this)
+                            .addApi(Auth.GOOGLE_SIGN_IN_API, signInOptions)
+                            .addOnConnectionFailedListener(this)
+                            .build();
 
     }
-
+/*
     @Override
     protected void onStart() {
         googleApiClient.connect();
@@ -56,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // TODO Auto-generated method stub
         super.onStop();
         googleApiClient.disconnect();
-    }
+    }*/
 
     @Override
     public void onClick(View view) {
@@ -104,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //  GoogleSignInAccount acct = result.getSignInAccount();
             //  Intent i = new Intent(MainActivity.this, homeActivity.class);
             //  startActivity(i);
+            Log.d("isSuccedd----->", "FALse");
             updateUI(true);
         } else {
             // Signed out, show unauthenticated UI.
@@ -114,9 +120,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void updateUI(boolean isLogin)
     {
         if (isLogin) {
+            Log.d("LOGIN--->", "ABOUT TO LOGIN");
             findViewById(R.id.signin).setVisibility(View.GONE);
             findViewById(R.id.signout).setVisibility(View.VISIBLE);
         } else {
+            Log.d("LOGOUT--->", "ABOUT TO LOGOUT");
             findViewById(R.id.signin).setVisibility(View.VISIBLE);
             findViewById(R.id.signout).setVisibility(View.GONE);
         }
@@ -129,6 +137,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == REQ_CODE) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            Log.d("Result", ""+result.getStatus().getStatusCode());
             handleResult(result);
         }
     }

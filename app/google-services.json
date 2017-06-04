@@ -22,7 +22,11 @@
         },
         {
           "client_id": "423470474788-e6di05epc01b0n7mvr7ibdignjio7c1v.apps.googleusercontent.com",
-          "client_type": 3
+          "client_type": 3,
+          "android_info": {
+            "package_name": "com.shobikha.android.wheysted",
+            "certificate_hash": "c229f7c0618d00123deb927f19c8e70c8051077a"
+          }
         }
       ],
       "api_key": [
