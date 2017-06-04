@@ -12,6 +12,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -31,12 +36,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private GoogleSignInOptions signInOptions;
     private static final int REQ_CODE = 2000;
 
+    //Facebook Login Stuff
+    LoginButton loginButton;
+    CallbackManager callBackManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //change
 
+        //Google Sign In
         signOut = (Button) findViewById(R.id.signout);
         SignIn = (SignInButton) findViewById(R.id.signin);
         SignIn.setOnClickListener(this);
@@ -47,6 +56,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             .addApi(Auth.GOOGLE_SIGN_IN_API, signInOptions)
                             .addOnConnectionFailedListener(this)
                             .build();
+
+        //Facebook Sign In
+        loginButton = (LoginButton) findViewById(R.id.login_button);
+        callBackManager = CallbackManager.Factory.create();
+        loginButton.registerCallback(callBackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Log.d("HASH-->>::", ""+loginResult.getAccessToken().getToken());
+                Log.d("ID-->>::", ""+loginResult.getAccessToken().getUserId());
+                //textView.setText("Login Success \n" + loginResult.getAccessToken().getUserId() + "\n" + loginResult.getAccessToken().getToken());
+                //Log in
+                Intent i = new Intent(MainActivity.this, HomeActivity.class);
+                i.putExtra("Sign", "FB");
+                startActivity(i);
+            }
+
+            @Override
+            public void onCancel() {
+                //textView.setText("Login Cancelled");
+                //May be add a Toast
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                //ADD A TOASTTT
+            }
+        });
 
     }
 /*
@@ -114,6 +150,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // Signed in successfully, show authenticated UI.
             //  GoogleSignInAccount acct = result.getSignInAccount();
             Intent i = new Intent(MainActivity.this, HomeActivity.class);
+            i.putExtra("Sign", "Google");
             startActivity(i);
 
             updateUI(true);
@@ -146,11 +183,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d("Result", ""+result.getStatus().getStatusCode());
             handleResult(result);
         }
+
+        callBackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
+            //TOAST HERE SAYING CONNECTION FAILED
     }
 }
 

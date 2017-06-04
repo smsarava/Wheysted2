@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.facebook.FacebookSdk;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -14,6 +16,7 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 
 public class HomeActivity extends MainActivity {
+    private String SignInDetect;
     private Button signOut;
     private GoogleApiClient mGoogleApiClient;
     @Override
@@ -21,21 +24,32 @@ public class HomeActivity extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+       // Bundle a = new Bundle();
+        //SignInDetect = a.get("Sign").toString();
         signOut = (Button) findViewById(R.id.signout);
+        //FacebookSdk.sdkInitialize(getApplicationContext());
         //signOut.setOnClickListener();
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
-                        new ResultCallback<Status>() {
-                            @Override
-                            public void onResult(Status status) {
-                                // ...
-                                Toast.makeText(getApplicationContext(),"Logged Out",Toast.LENGTH_SHORT).show();
-                                Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                                startActivity(i);
-                            }
-                        });
+
+               /* if(SignInDetect.equals("Google")){
+                    Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
+                            new ResultCallback<Status>() {
+                                @Override
+                                public void onResult(Status status) {
+                                    // ...
+                                    Toast.makeText(getApplicationContext(),"Logged Out",Toast.LENGTH_SHORT).show();
+                                    Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                                    startActivity(i);
+                                }
+                            });
+               }*/
+               //else
+               // {
+                   // LoginManager.getInstance().logOut();
+                //}
+
             }
         });
     }
