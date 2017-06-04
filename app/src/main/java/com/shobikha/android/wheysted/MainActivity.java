@@ -104,12 +104,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void handleResult(GoogleSignInResult result)
     {
+
         if (result.isSuccess()) {
+            //Log.d("USER TOKEN: ", result.getSignInAccount().getIdToken().toString());
+            //Save all the data for this id... this is a unique id..
+            Log.d("ID: ", result.getSignInAccount().getId().toString());
+            //To Display Name...
+            Log.d("NAME: ", result.getSignInAccount().getDisplayName());
             // Signed in successfully, show authenticated UI.
             //  GoogleSignInAccount acct = result.getSignInAccount();
-            //  Intent i = new Intent(MainActivity.this, homeActivity.class);
-            //  startActivity(i);
-            Log.d("isSuccedd----->", "FALse");
+            Intent i = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(i);
+
             updateUI(true);
         } else {
             // Signed out, show unauthenticated UI.
