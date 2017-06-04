@@ -1,19 +1,19 @@
 {
   "project_info": {
-    "project_number": "527546017059",
-    "project_id": "getwheysted-169000"
+    "project_number": "423470474788",
+    "project_id": "wheysted2-169708"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:527546017059:android:ae98d9fe3ed88382",
+        "mobilesdk_app_id": "1:423470474788:android:ae98d9fe3ed88382",
         "android_client_info": {
           "package_name": "com.shobikha.android.wheysted"
         }
       },
       "oauth_client": [
         {
-          "client_id": "527546017059-qavdbku445qmies4qov2serkmefc2mgi.apps.googleusercontent.com",
+          "client_id": "423470474788-liaettrnvh0gu2u8efbdqmoocuk9gppj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.shobikha.android.wheysted",
@@ -21,13 +21,13 @@
           }
         },
         {
-          "client_id": "527546017059-55kauuabh9ihfr87ir1jqjm86et07ejj.apps.googleusercontent.com",
+          "client_id": "423470474788-e6di05epc01b0n7mvr7ibdignjio7c1v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCr2LrPyjLRCt_kgAiyQpSsvBfHojBpdlA"
+          "current_key": "AIzaSyDAQSPkWFHyHDrukGuYRPghbHV88l26Mu8"
         }
       ],
       "services": {
