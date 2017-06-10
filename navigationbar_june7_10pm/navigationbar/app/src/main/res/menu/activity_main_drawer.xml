@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_journal"
+            android:title="My Food Journal" />
+        <item
+            android:id="@+id/nav_home"
+            android:title="Protien tracker" />
+        <item
+            android:id="@+id/nav_recipes"
+            android:title="Discover new recipes" />
+        <item
+            android:id="@+id/nav_recipebox"
+            android:title="Recipe box" />
+        <item
+            android:id="@+id/nav_history"
+            android:title="Protien history" />
+        <item
+            android:id="@+id/nav_profile"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout" />
+    </group>
+
+</menu>

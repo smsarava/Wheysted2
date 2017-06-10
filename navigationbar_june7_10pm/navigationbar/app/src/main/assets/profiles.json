@@ -1,0 +1,26 @@
+[  
+   {  
+      "url":"https://cdn-image.realsimple.com/sites/default/files/styles/portrait_435x518/public/bean-spinach-enchilada_0.jpg?itok=yIh5BxP2",
+      "name":"Slow-Cooker Bean and Spinach Enchiladas",
+      "time": 30,
+      "servings":4
+   },
+   {  
+      "url":"https://cdn-image.realsimple.com/sites/default/files/styles/rs_main_image/public/image/images/1108/chicken-goatcheese_300.jpg?itok=c3zHwPpj",
+      "name":"Chicken With Goat Cheese Vinaigrette",
+      "time":22,
+      "servings":4
+   },
+   {
+      "url":"https://cdn-image.realsimple.com/sites/default/files/styles/rs_main_image/public/image/images/1008/basil-salmon_300.jpg?itok=H7GrQCvm",
+      "name":"Roasted Curry Salmon With Tomatoes",
+      "time":20,
+      "servings":4
+   },
+   {
+    "url":"https://cdn-image.realsimple.com/sites/default/files/styles/rs_main_image/public/image/images/1403/lentil-kielbasa_300.jpg?itok=NcIHdiok",
+    "name":"Lentil and Kielbasa Stew",
+    "time":45,
+    "servings":6
+   }
+]

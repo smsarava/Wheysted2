@@ -1,0 +1,52 @@
+{
+  "project_info": {
+    "project_number": "423470474788",
+    "project_id": "wheysted2-169708"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423470474788:android:ae98d9fe3ed88382",
+        "android_client_info": {
+          "package_name": "com.example.princ.navigationbar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423470474788-liaettrnvh0gu2u8efbdqmoocuk9gppj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.princ.navigationbar",
+            "certificate_hash": "c229f7c0618d00123deb927f19c8e70c8051077a"
+          }
+        },
+        {
+          "client_id": "423470474788-e6di05epc01b0n7mvr7ibdignjio7c1v.apps.googleusercontent.com",
+          "client_type": 3,
+          "android_info": {
+            "package_name": "com.example.princ.navigationbar",
+            "certificate_hash": "c229f7c0618d00123deb927f19c8e70c8051077a"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAQSPkWFHyHDrukGuYRPghbHV88l26Mu8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

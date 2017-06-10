@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#413d3d"
+        android:ems="10"
+        android:text="Welcome! To get started with tracking your protein, logging your food and finding protein-friendly recipes, please click OK to calculate your daily protein intake. Vanaja pls edit this. IDK what to type lool"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/accent"
+        android:onClick="onClick"
+        android:text="OK"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp" />
+</LinearLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">navigationbar</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_food_journal">FoodJournal</string>
+
+    <string-array name="ActiveLevel">
+        <item>SELECT</item>
+        <item>Sedentary</item>
+        <item>Moderate</item>
+        <item>Active</item>
+    </string-array>
+
+    <string name="fb_id">725832084265455</string>
+
+</resources>
